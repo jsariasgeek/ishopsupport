@@ -25,6 +25,8 @@ SECRET_KEY = '3fvkr#+vo^hogafge7)rwcvhut@6%(lg(zazd%b5uc#fcg81tk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = socket.gethostname() == 'MacBook-Pro-de-Johan.local'
+ADMINS = (('Yohan Estiven Arias', 'jsarias0514@gmail.com'), )
+
 
 
 ALLOWED_HOSTS = ['*']
@@ -96,9 +98,9 @@ else:
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-CO'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
