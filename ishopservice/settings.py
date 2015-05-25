@@ -14,7 +14,13 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 import socket
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEBUG = socket.gethostname() == 'MacBook-Pro-de-Johan.local'
+
+if DEBUG:
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,7 +30,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3fvkr#+vo^hogafge7)rwcvhut@6%(lg(zazd%b5uc#fcg81tk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = socket.gethostname() == 'MacBook-Pro-de-Johan.local'
 ADMINS = (('Yohan Estiven Arias', 'jsarias0514@gmail.com'), )
 
 
@@ -113,3 +118,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
