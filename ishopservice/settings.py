@@ -27,7 +27,7 @@ SECRET_KEY = '3fvkr#+vo^hogafge7)rwcvhut@6%(lg(zazd%b5uc#fcg81tk'
 DEBUG = socket.gethostname() == 'MacBook-Pro-de-Johan.local'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
